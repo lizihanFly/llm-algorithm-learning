@@ -61,12 +61,31 @@ python scripts/gpu_linear_regression.py
 
 更完整的 clone、pull 和长任务说明见 `reports/server_run_commands.md`。
 
+## Mini-PyTorch Training Lab
+
+第一个正式学习小项目用于掌握 PyTorch 训练脚本的最小闭环：
+
+- `scripts/01_tensor_shape.py`：学习 Tensor、shape、view、matmul 和广播；
+- `scripts/02_autograd_linear.py`：不用 `nn.Module`，手写参数并用 Autograd 拟合线性函数；
+- `scripts/03_nn_module_regression.py`：使用 `torch.nn.Linear`、`MSELoss` 和 optimizer；
+- `scripts/04_dataset_dataloader.py`：使用 `TensorDataset` 和 `DataLoader` 组织小批量训练。
+
+服务器运行方式：
+
+```bash
+cd ~/llm_projects/repos/llm-algorithm-learning
+source /usr/local/anaconda3/bin/activate llm-train
+python scripts/01_tensor_shape.py
+python scripts/02_autograd_linear.py
+python scripts/03_nn_module_regression.py
+python scripts/04_dataset_dataloader.py
+```
+
+成功标准：脚本能正常结束；回归脚本的 weight 接近 3，bias 接近 2。
+
 ## 下一步学习计划
 
-1. Tensor 和 shape；
-2. Autograd；
-3. nn.Module；
-4. Dataset / DataLoader；
-5. Mini-Transformer；
-6. Hugging Face 模型推理；
-7. LoRA / PEFT 微调。
+1. 完成 Mini-PyTorch Training Lab；
+2. Mini-Transformer；
+3. Hugging Face 模型推理；
+4. LoRA / PEFT 微调。
