@@ -1,13 +1,14 @@
 # 服务器运行命令
 
-以下命令由用户复制到 FinalShell 执行。仓库地址和仓库名需要替换为实际值。
+以下命令由用户复制到 FinalShell 执行。
 
 ## 第一次 clone
 
 ```bash
+mkdir -p ~/llm_projects/repos
 cd ~/llm_projects/repos
-git clone <你的GitHub仓库地址>
-cd <仓库名>
+git clone https://github.com/lizihanFly/llm-algorithm-learning.git
+cd llm-algorithm-learning
 source /usr/local/anaconda3/bin/activate llm-train
 python scripts/gpu_linear_regression.py
 ```
@@ -22,7 +23,7 @@ python scripts/gpu_linear_regression.py
 ## 后续更新
 
 ```bash
-cd ~/llm_projects/repos/<仓库名>
+cd ~/llm_projects/repos/llm-algorithm-learning
 git pull
 source /usr/local/anaconda3/bin/activate llm-train
 python scripts/gpu_linear_regression.py
